@@ -1,5 +1,6 @@
 {
   "name": "photo-gallery-app",
+  "author": "Michael Ryan",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
