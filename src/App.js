@@ -1,24 +1,48 @@
-import logo from "./logo.svg";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import Gallery from "./components/Gallery/gallery.component";
 import "./App.scss";
+import { ADD_GALLERY, LOADING } from "./constants/action-types";
 
 function App() {
+  // const [gallery, setGallery] = useState([]);
+
+  ///WORKING
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     await fetch("https://jsonplaceholder.typicode.com/photos").then((res) =>
+  //       res
+  //         .json()
+  //         .then((photos) => setGallery(photos))
+  //         .catch((err) => {
+  //           console.log(err);
+  //         })
+  //     );
+  //   }
+  //   fetchData();
+  // }, []);
+
+  ///REDUX
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: LOADING });
+    fetch("https://jsonplaceholder.typicode.com/photos").then((res) =>
+      res
+        .json()
+        .then((photos) =>
+          dispatch({ type: ADD_GALLERY, payload: photos, loading: false })
+        )
+        .catch((err) => {
+          console.log(err);
+        })
+    );
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button className="btn btn-primary">Button</button>
-      </header>
+      <h2>Gallery</h2>
+      <Gallery />
     </div>
   );
 }
