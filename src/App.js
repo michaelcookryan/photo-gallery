@@ -7,7 +7,7 @@ import { ADD_GALLERY, LOADING } from "./constants/action-types";
 function App() {
   // const [gallery, setGallery] = useState([]);
 
-  ///WORKING
+  ///WORKING EXAMPLE FOR ASYNC/AWAIT
   // useEffect(() => {
   //   async function fetchData() {
   //     await fetch("https://jsonplaceholder.typicode.com/photos").then((res) =>
@@ -30,9 +30,7 @@ function App() {
     fetch("https://jsonplaceholder.typicode.com/photos").then((res) =>
       res
         .json()
-        .then((photos) =>
-          dispatch({ type: ADD_GALLERY, payload: photos, loading: false })
-        )
+        .then((photos) => dispatch({ type: ADD_GALLERY, payload: photos }))
         .catch((err) => {
           console.log(err);
         })

@@ -2,7 +2,7 @@ import { ADD_GALLERY, LOADING } from "../constants/action-types";
 
 const initialState = {
   galleries: [],
-  loading: false,
+  loading: true,
 };
 
 function rootReducer(state = initialState, action) {

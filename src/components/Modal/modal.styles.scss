@@ -1,0 +1,16 @@
+.modal {
+  .modal-dialog {
+    .modal-content {
+      width: auto;
+
+      .modal-footer {
+        justify-content: space-between;
+        border: none;
+
+        h5 {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

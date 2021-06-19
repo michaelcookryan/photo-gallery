@@ -4,15 +4,18 @@ import { connect } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
 const mapStateToProps = (state) => {
-  return { galleries: state.galleries, loading: state.loading };
+  return {
+    galleries: state.galleries,
+    loading: state.loading,
+  };
 };
 
 const ConnectedGallery = ({ galleries, loading }) => (
   <section className="gallery">
     {loading ? (
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border text-info" role="status">
-          <span class="visually-hidden">Loading...</span>
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border text-info" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       </div>
     ) : (
