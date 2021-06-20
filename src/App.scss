@@ -2,7 +2,9 @@
 @import "~bootstrap/scss/bootstrap";
 
 // Import component styles
+@import "./components/Footer/footer.styles.scss";
 @import "./components//Gallery/gallery.styles.scss";
+@import "./components/Header/header.styles.scss";
 @import "./components/Modal/modal.styles.scss";
 @import "./components/Photo/photo.styles.scss";
 
@@ -23,10 +25,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  font-weight: 700;
 }
+
 .App {
   display: flex;
   justify-content: center;

@@ -1,0 +1,17 @@
+footer {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $white;
+    margin: 0 1em 1em 0;
+  }
+}

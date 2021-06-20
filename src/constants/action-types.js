@@ -1,2 +1,2 @@
-export const ADD_GALLERY = "ADD_GALLERY";
-export const LOADING = "LOADING";
+export const ADD_GALLERY = "ADD_GALLERY",
+  LOADING = "LOADING";

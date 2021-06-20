@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import Footer from "./components/Footer/footer.component";
 import Gallery from "./components/Gallery/gallery.component";
+import Header from "./components/Header/header.component";
 import "./App.scss";
 import { ADD_GALLERY, LOADING } from "./constants/action-types";
 
@@ -39,8 +41,9 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Gallery</h2>
+      <Header />
       <Gallery />
+      <Footer />
     </div>
   );
 }
